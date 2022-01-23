@@ -307,7 +307,7 @@ class PatientAddViewSet(ModelViewSet):
                 'email_body': email_body,
                 'email_subject': 'Login credential For Online EHR'
             }
-            # Util.sent_email(data, user_data['email_id'])
+            Util.sent_email(data, user_data['email_id'])
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
