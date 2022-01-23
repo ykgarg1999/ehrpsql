@@ -121,12 +121,19 @@ WSGI_APPLICATION = 'healthcaresystem.wsgi.application'
 
 DATABASES = {
     "default": {
-        "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.postgresql"),
-        "NAME": os.environ.get("SQL_DATABASE", "health"),
-        "USER": os.environ.get("SQL_USER", "postgres"),
-        "PASSWORD": os.environ.get("SQL_PASSWORD", 12345),
-        "HOST": os.environ.get("SQL_HOST", "localhost"),
-        "PORT": os.environ.get("SQL_PORT", "5432")
+        # "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.postgresql"),
+        # "NAME": os.environ.get("SQL_DATABASE", "health"),
+        # "USER": os.environ.get("SQL_USER", "postgres"),
+        # "PASSWORD": os.environ.get("SQL_PASSWORD", 12345),
+        # "HOST": os.environ.get("SQL_HOST", "localhost"),
+        # "PORT": os.environ.get("SQL_PORT", "5432")
+
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "ehrbase",
+        "USER": "ehr_user",
+        "PASSWORD": "ehr_pass",
+        "HOST": "ehrdb-1.cayn3utpakrm.us-east-1.rds.amazonaws.com",
+        "PORT": 5432
     }
 }
 
