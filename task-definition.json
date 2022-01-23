@@ -9,7 +9,7 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/online-ehrTask",
+          "awslogs-group": "/ecs/ehr360-task",
           "awslogs-region": "us-east-1",
           "awslogs-stream-prefix": "ecs"
         }
@@ -37,7 +37,7 @@
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "052250720528.dkr.ecr.us-east-1.amazonaws.com/online-ehr:latest",
+      "image": "052250720528.dkr.ecr.us-east-1.amazonaws.com/ehr360:latest",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -54,7 +54,7 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "online-ehrContainer"
+      "name": "ehr360-cont"
     }
   ],
   "placementConstraints": [],
@@ -64,8 +64,8 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:052250720528:task-definition/online-ehrTask:1",
-  "family": "online-ehrTask",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:052250720528:task-definition/ehr360-ask:2",
+  "family": "ehr360-task",
   "requiresAttributes": [
     {
       "targetId": null,
