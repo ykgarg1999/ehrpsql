@@ -119,30 +119,30 @@ WSGI_APPLICATION = 'healthcaresystem.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 
-DATABASES = {
-    "default": {
-        # "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.postgresql"),
-        # "NAME": os.environ.get("SQL_DATABASE", "health"),
-        # "USER": os.environ.get("SQL_USER", "postgres"),
-        # "PASSWORD": os.environ.get("SQL_PASSWORD", 12345),
-        # "HOST": os.environ.get("SQL_HOST", "localhost"),
-        # "PORT": os.environ.get("SQL_PORT", "5432")
-
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "ehrbase",
-        "USER": "ehr_user",
-        "PASSWORD": "ehr_pass",
-        "HOST": "ehrdb-1.cayn3utpakrm.us-east-1.rds.amazonaws.com",
-        "PORT": "5432"
-    }
-}
-
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
+#     "default": {
+#         # "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.postgresql"),
+#         # "NAME": os.environ.get("SQL_DATABASE", "health"),
+#         # "USER": os.environ.get("SQL_USER", "postgres"),
+#         # "PASSWORD": os.environ.get("SQL_PASSWORD", 12345),
+#         # "HOST": os.environ.get("SQL_HOST", "localhost"),
+#         # "PORT": os.environ.get("SQL_PORT", "5432")
+
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "ehrbase",
+#         "USER": "ehr_user",
+#         "PASSWORD": "ehr_pass",
+#         "HOST": "ehrdb-1.cayn3utpakrm.us-east-1.rds.amazonaws.com",
+#         "PORT": "5432"
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
