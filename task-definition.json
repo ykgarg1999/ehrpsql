@@ -37,7 +37,7 @@
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "052250720528.dkr.ecr.us-east-1.amazonaws.com/ehr360:d1933e8b3cc1fc10f60739f096c73c07dbc8b14e",
+      "image": "052250720528.dkr.ecr.us-east-1.amazonaws.com/ehr360:cc83243d1f928911c175cd7fe006a124e062008c",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -64,7 +64,7 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:052250720528:task-definition/ehr360-task:3",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:052250720528:task-definition/ehr360-task:4",
   "family": "ehr360-task",
   "requiresAttributes": [
     {
@@ -126,7 +126,7 @@
     "cpuArchitecture": null
   },
   "cpu": "1024",
-  "revision": 3,
+  "revision": 4,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
