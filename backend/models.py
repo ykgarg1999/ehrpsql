@@ -1,7 +1,9 @@
+from datetime import datetime
 import uuid
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 from accounts.models import Profile
+from django.utils import timezone
 
 
 class PatientDetails(models.Model):
@@ -130,4 +132,4 @@ class PatientComments(models.Model):
     id = models.UUIDField(default=uuid.uuid4, unique=True, primary_key=True)
     comment = models.TextField()
     patient = models.ForeignKey(PatientDetails, on_delete=models.CASCADE)
-    
+    date_added = models.DateTimeField(default=timezone.now)
