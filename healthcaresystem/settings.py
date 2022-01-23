@@ -128,12 +128,13 @@ DATABASES = {
         # "HOST": os.environ.get("SQL_HOST", "localhost"),
         # "PORT": os.environ.get("SQL_PORT", "5432")
 
+
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "ehrbase",
         "USER": "ehr_user",
         "PASSWORD": "ehr_pass",
         "HOST": "ehrdb-1.cayn3utpakrm.us-east-1.rds.amazonaws.com",
-        "PORT": 5432
+        "PORT": "5432"
     }
 }
 
