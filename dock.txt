@@ -1,0 +1,32 @@
+name: Docker Image CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      env:
+        DOCKER_USER: ${{secrets.DOCKER_USERNAME}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+        SECRET_KEY: ${{secrets.SECRET_KEY}}
+      run: |
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    - name: Build the Docker image
+      run: |
+        docker-compose build 
+    - name: Docker Tag
+      run: docker tag ehrsqlite_project ${{secrets.DOCKER_USERNAME}}/ehrdeploy
+    - name: Docker Push
+      run: docker push ${{secrets.DOCKER_USERNAME}}/ehrdeploy

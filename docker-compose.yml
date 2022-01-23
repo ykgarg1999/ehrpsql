@@ -1,0 +1,36 @@
+# version: '3.3'
+
+# services:
+#   web:
+#     build: .
+#     command: python manage.py runserver
+#     links:
+#       - db
+#     volumes:
+#       - .:/usr/src/app/
+#     ports:
+#       - 8000:8000
+#     env_file:
+#       - ./.env.dev
+#   db:
+#     image: postgres:13.0-alpine
+#     volumes:
+#       - postgres_data:/var/lib/postgresql/data/
+#     environment:
+#       - POSTGRES_USER=postgres
+#       - POSTGRES_PASSWORD=12345
+#       - POSTGRES_DB=health
+
+# volumes:
+#   postgres_data:
+
+version: "3.2"
+services:
+
+  project:
+    restart: always
+    container_name: ehrdocker
+  
+    build:
+      context: .
+      dockerfile: Dockerfile
